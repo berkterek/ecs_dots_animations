@@ -8,6 +8,7 @@ namespace EcsDotsScripts.Authorings
     public class PlayerAuthoring : MonoBehaviour
     {
         [SerializeField] AnimatorController Prefab;
+        [SerializeField] float MoveSpeed = 5f;
         
         private class PlayerAuthoringBaker : Baker<PlayerAuthoring>
         {
@@ -20,6 +21,11 @@ namespace EcsDotsScripts.Authorings
                 AddComponentObject(entity, new AnimatorModelData()
                 {
                     AnimatorModelPrefab = authoring.Prefab
+                });
+
+                AddComponent(entity, new MoveData
+                {
+                    MoveSpeed = authoring.MoveSpeed
                 });
             }
         }
