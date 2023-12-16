@@ -15,6 +15,7 @@ namespace EcsDotsScripts.Systems
 
         protected override void OnCreate()
         {
+            RequireForUpdate<InputData>();
             _input = new GameInputActions();
         }
 
