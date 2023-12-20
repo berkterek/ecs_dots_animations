@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 5615815007780928290}
+  _transform: {fileID: 1114260476483171701}
 --- !u!1 &4072265639379859564
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace EcsDotsAnimations.Controllers
@@ -15,6 +16,16 @@ namespace EcsDotsAnimations.Controllers
         {
             if (_animator == null) _animator = GetComponentInChildren<Animator>();
             if (_transform == null) _transform = GetComponent<Transform>();
+        }
+
+        void OnTriggerEnter(Collider other)
+        {
+            Debug.Log($"{other.gameObject.name} {nameof(OnTriggerEnter)}");
+        }
+
+        void OnTriggerExit(Collider other)
+        {
+            Debug.Log($"{other.gameObject.name} {nameof(OnTriggerExit)}");
         }
 
         public void MoveAnimation(float velocity)
