@@ -29,7 +29,8 @@ namespace EcsDotsAnimations.Controllers
 
         public void MoveAnimation(float velocity)
         {
-            _animator.SetFloat(Speed, velocity);
+            _animator.SetFloat(Speed, velocity, 0.1f, Time.deltaTime);
+            //_animator.SetFloat(Speed, velocity);
         }
     }
 }

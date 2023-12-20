@@ -8,6 +8,7 @@ namespace EcsDotsScripts.Systems
 {
     [UpdateInGroup(typeof(SimulationSystemGroup))]
     [UpdateAfter(typeof(TransformSystemGroup))]
+    [BurstCompile]
     public partial struct MoveSystem : ISystem
     {
         [BurstCompile]
@@ -28,10 +29,12 @@ namespace EcsDotsScripts.Systems
 
         [BurstCompile]
         private void Execute(Entity entity, in InputData inputData, ref LocalTransform localTransform,
-            in MoveData moveData)
+            ref MoveData moveData)
         {
             var moveInputValue = inputData.MoveInput;
-            if (math.length(moveInputValue) <= 0f) return;
+            var moveLength = math.length(moveInputValue);
+            moveData.Velecity = moveLength;
+            if (moveLength <= 0f) return;
 
             var moveDirection = DeltaTime * moveData.MoveSpeed * moveInputValue;
             localTransform.Position += moveDirection;
