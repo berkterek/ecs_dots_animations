@@ -11,9 +11,9 @@ Welcome to the `ecs_dots_animations` repository! This project, created for educa
 
 ## Getting Started
 1. **Clone the Repository**: 
+   To clone the repository, use the following command in your terminal:
    ```bash
-   git clone [repository URL](https://github.com/berkterek/ecs_dots_animations.git)
-   ```
+   git clone https://github.com/berkterek/ecs_dots_animations.git
 2. **Install Unity**: Ensure you have a version that supports ECS and DOTS.
 3. **Open the Project**: Explore the animations in Unity.
 
