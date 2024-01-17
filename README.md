@@ -25,4 +25,4 @@ Welcome to the `ecs_dots_animations` repository! This project, created for educa
 Contributions are welcome! Feel free to fork the repository, make improvements, and submit a pull request.
 
 ## License
-This project is under the Unlicense - see the [LICENSE](LICENSE.md) file for details.
+This project is open-sourced and available for educational use.
